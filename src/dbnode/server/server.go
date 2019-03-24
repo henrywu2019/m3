@@ -1146,7 +1146,6 @@ func withEncodingAndPoolingOptions(
 
 	encoderPool.Init(func() encoding.Encoder {
 		if schema != nil {
-			// TODO: should probably allow a schema to be passed on construction.
 			enc := proto.NewEncoder(time.Time{}, encodingOpts)
 			enc.SetSchema(schema)
 			return enc
